@@ -15,7 +15,7 @@ const authorInp = document.getElementById("author-inp")
 const quoteList = document.getElementById("quote-list")
 
 insertBtn.addEventListener("click", function(){
-    if (authorInp.value !== false && quoteInp.value != false){
+    if (authorInp.value.trim() !== '' && quoteInp.value.trim() !== ''){
         let author = authorInp.value
         let quote = quoteInp.value
         push(quoteListInDB,{author,quote})
